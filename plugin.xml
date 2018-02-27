@@ -26,37 +26,30 @@
         <!-- Default usage descriptions: override as necessary in .plist -->
         
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-            <string>$LocationWhenInUseUsageDescription</string>
+            <string>このアプリは画面が閉じている時やバックグラウンドで起動する時にも持続的に位置情報にアクセスする権限が必要です。</string>
         </config-file>
         
         <!-- iOS >=11 -->
         <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
-            <string>$LocationAlwaysAndWhenInUseUsageDescription</string>
+            <string>このアプリは画面が閉じている時やバックグラウンドで起動する時にも持続的に位置情報にアクセスする権限が必要です。</string>
         </config-file>
         
         <!-- iOS <=10 -->
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-            <string>$LocationAlwaysUsageDescription</string>
+            <string>このアプリは画面が閉じている時やバックグラウンドで起動する時にも持続的に位置情報にアクセスする権限が必要です。</string>
         </config-file>
         
         <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
-            <string>$PhotoLibraryUsageDescription</string>
+            <string>プロフィール写真を新しくアップロードするか、又は変更するためにはGetWalkにアルバムへのアクセスを許可する必要があります。</string>
         </config-file>
 
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-            <string>$CameraUsageDescription</string>
+            <string>写真撮影、又はQRコードをスキャンするためにはGetWalkにカメラへのアクセスを許可する必要があります。</string>
         </config-file>
 
         <config-file target="*-Info.plist" parent="NSMotionUsageDescription">
-            <string>$MotionUsageDescription</string>
+            <string>このアプリは正しく機能するためにモーション感知センサーの利用が必要です。</string>
         </config-file>
-
-        <preference name="LocationWhenInUseUsageDescription" default=" "/>
-        <preference name="LocationAlwaysAndWhenInUseUsageDescription" default=" "/>
-        <preference name="LocationAlwaysUsageDescription" default=" "/>
-        <preference name="PhotoLibraryUsageDescription" default=" "/>
-        <preference name="CameraUsageDescription" default=" "/>
-        <preference name="MotionUsageDescription" default=" "/>
 
         <js-module src="www/ios/diagnostic.js" name="Diagnostic">
             <clobbers target="cordova.plugins.diagnostic" />
